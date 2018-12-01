@@ -1,11 +1,6 @@
 # kim-cheeze
 
-## Dependencies
-```
-sudo pip install Flask
-```
+## Project structure
+`client` contains the React web frontend. The README.md will have instructions on how to run it locally.
 
-## Run
-```
-FLASK_APP=hello.py flask run
-```
+`server` contains the python Flask webserver. All backend logic/models/tchochkies should go here.
