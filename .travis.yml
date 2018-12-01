@@ -11,6 +11,8 @@ script:
 - docker-compose build
 - docker tag phillipxkang/kim-cheeze:latest 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
 - docker push 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
+- echo $AWS_ACCESS_KEY_ID
+- echo $AWS_ACCESS_KEY_SECRET
 - ecs-deploy -c deployer -n cluster -i phillipxkang/kim-cheeze:latest
 env:
   global:
