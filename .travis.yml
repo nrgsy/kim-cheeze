@@ -4,7 +4,7 @@ before_install:
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
 script:
-- eval $(aws ecr get-login --region us-west-1)
+- eval $(aws ecr get-login --no-include-email --region us-west-1) 
 - docker-compose build
 - docker tag phillipxkang/kim-cheeze:latest 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
 - docker push 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
