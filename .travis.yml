@@ -5,6 +5,7 @@ before_install:
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
 script:
+- echo $(python --version)
 - eval $(aws ecr get-login --no-include-email --region us-west-1) 
 - curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-deploy | 
   sudo tee -a /usr/bin/ecs-deploy

@@ -7,6 +7,7 @@
 `server` contains the python Flask webserver. All backend logic/models/tchochkies should go here.
 
 ## Build structure
-You can check `server` builds by the TravisCI badge at the top of this document ^^^.
+You can check `server` builds by the TravisCI badge at the top of this document ^^^. 
+`server` will automatically deploy to `bikini-bottom-1965760366.us-west-1.elb.amazonaws.com`
 
 `client` will automatically deploy via netlify to `https://xenodochial-perlman-0c08ad.netlify.com/`
