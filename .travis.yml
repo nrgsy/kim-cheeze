@@ -5,9 +5,13 @@ before_install:
 - export PATH=$PATH:$HOME/.local/bin
 script:
 - eval $(aws ecr get-login --no-include-email --region us-west-1) 
+- curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-deploy | \
+  sudo tee -a /usr/bin/ecs-deploy
+- sudo chmod +x /usr/bin/ecs-deploy
 - docker-compose build
 - docker tag phillipxkang/kim-cheeze:latest 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
 - docker push 746836633374.dkr.ecr.us-west-1.amazonaws.com/phillipxkang/kim-cheeze:latest
+- ecs-deploy -c deployer -n cluster -i phillipxkang/kim-cheeze:latest
 env:
   global:
   - secure: nDCecqVDOccqq4EKQmpLa88ORhdO5jmmCyBDuB9nbCOjfXk1Mtx0hfhx+GUaH0fqlgCqDrnBLkP7Lx5zqLU9saPaW3xsKznTEfn4dh5B3jGpk4+54MrH5rWKXtojv1hrWPcZ+8pgnPwZJNEdR98i14w9oJYw0q5cWSfnL7TnPfmaOVVzlrlv5j9eFVDxqcFmr6CvxW0GbZr7nrGt25rkOboQy4OtkjzHC0ckn85o7hGMfweh4EuqukEqRxOcyGAhnKoZ39zBQXcs4SgfDAQaSQPYxkR0gdoXXG1NStvGBV07GLkWNl9Na4pJKIYHLKbJ1Po1hO6EXjTIQ0J/kHnQ9tTDU+uXj7cX5dTnWRKx186TMBHHBvKA4MRg7hU0WEqgjJiui5NKlDXwQGbJ9swFWeo+rig39p/LCrBVPZdz10hsU8KDPUy/F7VDh75NGgV5lBr2LqIuc/kb4DA2lSrhn2XLLaQxqW8YUE0eNou6SpU/18hvuDL0p3fIR7TUSrwF5CE2GYbSoWRjvuCHabyrkyebPnvXyei2nYV5YcBHiyqfsqM14RZG9tXPimyY2xN/iDTjeUgqiyI/QDQH71O5vRFQ8EqUOSpYt+JKt2h9clnX61G4eRs2eI+WxZGFPj+XyHX8LschszX8ZWNVdGdMTiu8q1osSpgxVebb9eWwd8E=
