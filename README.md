@@ -8,11 +8,11 @@
 Please describe this product or service including any machine learning models used
 
 ## Key Technologies:
-for example: Flask, Tensor Flow, Keras
+Flask, React, Scikit Learn
 
 ## Steps to Build and Test:
 ### Production build and deploy:
-Our project is heavily integrated into CI tools. Our frontend uses Netlify to build and deploy our React web frontend. Our backend uses TravisCI 
+Our project is heavily integrated into CI tools. Our frontend uses Netlify to build and deploy our React web frontend. Our backend uses TravisCI to build and package for deployment to Amazon ECS.
 ### Local client build and deploy:
   ```
   cd client
