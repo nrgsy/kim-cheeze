@@ -8,17 +8,21 @@ sc = SlackClient(slack_token)
 
 channels =  sc.api_call("channels.list")
 
-
+# Go through all public channels in workspace
 for channel in channels['channels']:
   channel_history = sc.api_call(
     "channels.history",
     channel=channel['id']
   )
 
-  # if channel['id'] =="CEH1R2MA7":
+  # Go through all messages in channel
   for message in channel_history['messages']:
+
+    # Find messages that have reactions
     if 'reactions' in message:
       print("User id: "+message['user'])
+
+      # Go through all reactions of a message and list users who sent reactions
       print("People who interacted with user: "),
       for reaction in message['reactions']:
         for user in reaction['users']:
