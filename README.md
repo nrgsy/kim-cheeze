@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/phillipxkang/kim-cheeze.svg?branch=master)](https://travis-ci.org/phillipxkang/kim-cheeze)
 
 
-<p align="center"><img style="max-height: 900px" src="client/logo.png" /></p>
+<p align="center"><img href="https://bring-clarity.com" style="max-height: 900px" src="client/logo.png" /></p>
 <p align="center">Bringing clear insights into your employees' well-being</p>
 
 ## Overview:
