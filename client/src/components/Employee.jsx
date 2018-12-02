@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import { HashLink as Link } from 'react-router-hash-link';
+
+import './animate.css';
 import './Employee.css';
 
 
 import {
   DropdownButton,
   MenuItem,
-  Image
+  Image,
+  Button
 } from 'react-bootstrap'
 
 const StyledDropdownContainer = styled.div`
@@ -31,11 +35,10 @@ class Employee extends Component {
     var data = {
       labels: ['Phil Kang', '1', 'Thomas Pech', 'Nate', 'Jade Hayes', 'Jacob Birk', 'Nathaniel Ford', 'Kripa Argwal', 'Steven Davidovitz'],
       series: [
-        [75, 70, 60, 71, 92, 94, 82, 65, 60, 42],
-        [65, 60, 40, 61, 92, 74, 92, 85, 90, 80]
-      ]
+        [75, 70, 60, 71, 92, 94, 82, 65, 60, 42]      ]
     };
 
+    var pie_data = {labels: ['',''], series:[1,9]}
 
     var options = {
       high: 100,
@@ -56,7 +59,15 @@ class Employee extends Component {
             <div className="title">
               <StyledH3><div className="profile">
                 <Image src="https://i.imgur.com/glelrEn.jpg" responsive circle />
-              </div>Thomas Pech</StyledH3>
+              </div>Thomas Pech<div className="social">
+              <p className="social-label">Employee sociability: </p>
+              <Link to="/social">
+              <ChartistGraph
+                    className='social-graph'
+                    data={pie_data}
+                    // options={options}
+                    type={'Pie'}
+                    /></Link> 90%</div></StyledH3>
               </div>
           </Row>
           </Grid>
@@ -66,7 +77,10 @@ class Employee extends Component {
                     options={options}
                     type={type}
                     />
+                          <Button bsStyle="primary tada">Schedule 1-1</Button>
+
       </div>
+
 
     );
   }

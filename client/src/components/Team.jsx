@@ -34,8 +34,7 @@ class Team extends Component {
     var line_data = {
       labels: ['Phil Kang', '1', 'Thomas Pech', 'Nate', 'Jade Hayes', 'Jacob Birk', 'Nathaniel Ford', 'Kripa Argwal', 'Steven Davidovitz'],
       series: [
-        [75, 70, 60, 71, 92, 94, 82, 65, 60, 50],
-        [65, 60, 40, 61, 92, 74, 92, 85, 90, 80]
+        [75, 70, 60, 71, 92, 94, 82, 65, 60, 50]
       ]
     };
 
@@ -53,8 +52,7 @@ class Team extends Component {
     var data = {
       labels: ['Phil Kang', 'Thomas Pech', 'Jade Hayes'],
       series: [
-        [80, 42, 92],
-        [85, 80, 92]
+        [80, 42, 92]
       ]
     };
 

@@ -11,6 +11,30 @@
   padding-right: 10px;
 }
 
+.social {
+  width: 2em;
+  height: 2em;
+}
+.social{
+  float: right;
+}
+
+.social-graph{
+  height: 2em;
+}
+
+.ct-series-a .ct-slice-pie {
+  fill: #d3d3d3;
+}
+
+.social-label {
+  font-size: 12px;
+}
+
+.ct-series-b .ct-slice-pie {
+  fill: #ff6961;
+}
+
 .title {
   width: 100%;
   text-align: center

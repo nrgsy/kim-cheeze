@@ -39,7 +39,7 @@ class KNav extends Component {
       </Nav>
       <Navbar.Form pullRight>
           <FormGroup>
-            <FormControl type="text" placeholder="Kim Cheeze" />
+            <FormControl type="text" placeholder="Employee name" />
           </FormGroup>{' '}
           <Link to="/employee/Thomas-Pech">
             <Button type="submit">Submit</Button>
