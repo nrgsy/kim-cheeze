@@ -4,7 +4,9 @@ class Employee extends Component {
 
   render() {
     return (
-      <div>Employee PAGE</div>
+      <div>Employee PAGE
+      </div>
+      
     );
   }
 }
