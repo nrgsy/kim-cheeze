@@ -21,7 +21,7 @@ class KNav extends Component {
       <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/home"><img className="icon-image" src="https://i.imgur.com/Z6Xv4CF.png" /></Link>
+          <img className="icon-image" src="https://i.imgur.com/Z6Xv4CF.png" />
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
