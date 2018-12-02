@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/phillipxkang/kim-cheeze.svg?branch=master)](https://travis-ci.org/phillipxkang/kim-cheeze)
 
+# Clarity
+Bringing clear insights into your employees' well-being
 
 ## Overview:
 Please describe this product or service including any machine learning models used
