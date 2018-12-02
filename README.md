@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/phillipxkang/kim-cheeze.svg?branch=master)](https://travis-ci.org/phillipxkang/kim-cheeze)
 
 
-<h1 style="text-align: center;">Clarity</h1>
-<div style="text-align: center;">Bringing clear insights into your employees' well-being</div>
+<div style="width: 100%; text-align: center;"><h1>Clarity</h1></div>
+<div style="width: 100%; text-align: center;">Bringing clear insights into your employees' well-being</div>
 
 ## Overview:
 Please describe this product or service including any machine learning models used
