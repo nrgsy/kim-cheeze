@@ -1,5 +1,6 @@
 # base image
-FROM python:3.6.5-alpine
+#FROM python:3.5-alpine
+FROM frolvlad/alpine-python-machinelearning
 
 # set working directory
 WORKDIR /usr/src/app
