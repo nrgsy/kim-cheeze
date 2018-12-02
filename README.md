@@ -36,28 +36,30 @@ Our project is heavily integrated into CI tools. Our frontend uses Netlify to bu
   python model.py
   ```
   
+  ```
   ==================== Random Forest prediction results ====================
-              precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
 No Attrition       0.94      0.98      0.96       245
-   Attrition       0.89      0.67      0.77        49
+     Attrition       0.89      0.67      0.77        49
 
-   micro avg       0.93      0.93      0.93       294
-   macro avg       0.91      0.83      0.86       294
+     micro avg       0.93      0.93      0.93       294
+     macro avg       0.91      0.83      0.86       294
 weighted avg       0.93      0.93      0.93       294
 
 Total Accuracy: 0.9319727891156463 
 
 ==================== Gradient Boosting prediction results ====================
-              precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
 No Attrition       0.94      0.99      0.96       245
-   Attrition       0.94      0.67      0.79        49
+     Attrition       0.94      0.67      0.79        49
 
-   micro avg       0.94      0.94      0.94       294
-   macro avg       0.94      0.83      0.88       294
+     micro avg       0.94      0.94      0.94       294
+     macro avg       0.94      0.83      0.88       294
 weighted avg       0.94      0.94      0.93       294
 
 Total Accuracy: 0.9387755102040817
+```
 
 Accuracy, precision, and recall were use to gauge the balance of false positives/false negatives and evaluate model performance. As seen above, Gradient Boosting performs as well as or slightly better than Random Forest for accuracy, precision, and recall.
