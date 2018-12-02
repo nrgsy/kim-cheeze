@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
 
+import {
+  DropdownButton,
+  MenuItem
+} from 'react-bootstrap'
+
 class Team extends Component {
 
   render() {
@@ -25,8 +30,22 @@ class Team extends Component {
 
     var type = 'Line'
     return (
+<<<<<<< HEAD
       <div>TEAM
                         <ChartistGraph data={data} options={options} type={type} />
+=======
+      <div className='container'>
+        <DropdownButton
+          title='Teams'>
+          <MenuItem eventKey="1">Launchpad</MenuItem>
+          <MenuItem eventKey="2">Apps</MenuItem>
+          <MenuItem divider />
+          <MenuItem eventKey="3">
+            K8s
+          </MenuItem>
+          <MenuItem eventKey="4">Platform</MenuItem>
+        </DropdownButton>
+>>>>>>> * Added dropdown button
       </div>
     );
   }
