@@ -4,10 +4,14 @@ import {
   Navbar,
   NavItem,
   Nav,
+  Image,
   FormGroup,
   FormControl,
   Button
 } from 'react-bootstrap'
+
+import './Navbar.css';
+
 
 class KNav extends Component {
   render() {
@@ -15,7 +19,7 @@ class KNav extends Component {
       <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/home">Home</Link>
+          <Link to="/home"><img className="icon-image" src="https://i.imgur.com/Z6Xv4CF.png" /></Link>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
@@ -30,7 +34,9 @@ class KNav extends Component {
           <FormGroup>
             <FormControl type="text" placeholder="Kim Cheeze" />
           </FormGroup>{' '}
-          <Button type="submit">Submit</Button>
+          <Link to="/employee/Thomas-Pech">
+            <Button type="submit">Submit</Button>
+          </Link>
         </Navbar.Form>
     </Navbar>
     )

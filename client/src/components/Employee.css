@@ -1,0 +1,17 @@
+.jgraph {
+  height: 25em;
+}
+
+.profile{
+  height:4em;
+  width: 4em;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.title {
+  width: 100%;
+  text-align: center
+}

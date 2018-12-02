@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import './Team.css';
+
 
 import {
   DropdownButton,
@@ -63,17 +65,13 @@ class Team extends Component {
             </StyledDropdownContainer>
             <StyledH3>Team: Platform</StyledH3>
           </Row>
-          <Row>
-            <StyledGraphContainer>
+          </Grid>
               <ChartistGraph
                     className='graph'
                     data={data}
                     options={options}
                     type={type}
                     />
-            </StyledGraphContainer>
-          </Row>
-        </Grid>
       </div>
 
     );
