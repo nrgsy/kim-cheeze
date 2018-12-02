@@ -33,7 +33,7 @@ train, test, target_train, target_val = train_test_split(attrition_final,
                                                          target,
                                                          train_size= 0.80,
                                                          random_state=0);
-print(test)
+
 # Oversample minority class (employees who actually left) using SMOTE
 # to prevent classifier from always predicting the majority class
 oversampler=SMOTE(random_state=0)
@@ -57,10 +57,10 @@ rf = RandomForestClassifier(**rf_params)
 rf.fit(smote_train, smote_target)
 rf_predictions = rf.predict(test)
 
-divide_str = "="*30
+divide_str = "="*20
 print(divide_str, "Random Forest prediction results", divide_str)
 print(classification_report(target_val, rf_predictions))
-print("\nTotal Accuracy: {}".format(accuracy_score(target_val, rf_predictions)))
+print("Total Accuracy: {}".format(accuracy_score(target_val, rf_predictions)),'\n')
 
 gb_params = {
     'n_estimators': 1500,
@@ -81,4 +81,4 @@ gb_predictions = gb.predict(test)
 
 print(divide_str, "Gradient Boosting prediction results", divide_str)
 print(classification_report(target_val, gb_predictions))
-print("\nTotal Accuracy: {}".format(accuracy_score(target_val, gb_predictions)))
+print("Total Accuracy: {}".format(accuracy_score(target_val, gb_predictions)),'\n')
