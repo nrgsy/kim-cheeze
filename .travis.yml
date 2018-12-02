@@ -3,7 +3,7 @@ language: python
 services:
 - docker
 before_install:
-- pip install --user awscli
+- pip install awscli
 - export PATH=$PATH:$HOME/.local/bin
 script:
 - echo $(python --version)
