@@ -7,6 +7,8 @@ import {
   Image,
   FormGroup,
   FormControl,
+  NavDropdown,
+  MenuItem,
   Button
 } from 'react-bootstrap'
 
@@ -26,9 +28,14 @@ class KNav extends Component {
         <NavItem eventKey={2}>
           <Link to="/social">Social</Link>
         </NavItem>
-        <NavItem eventKey={2}>
-          <Link to="/teams">Team</Link>
-        </NavItem>
+        <NavDropdown eventKey={3} title="Teams" id="basic-nav-dropdown">
+          <MenuItem eventKey={3.1}><Link to="/team/machine-learning">Frontend</Link></MenuItem>
+          <MenuItem eventKey={3.2}><Link to="/team/machine-learning">Backend</Link></MenuItem>
+          <MenuItem eventKey={3.3}><Link to="/team/machine-learning">devOps</Link></MenuItem>
+          <MenuItem eventKey={3.3}><Link to="/team/machine-learning">ML</Link></MenuItem>
+          <MenuItem eventKey={3.3}><Link to="/team/machine-learning">Database</Link></MenuItem>
+          <MenuItem eventKey={3.3}><Link to="/team/machine-learning">QA</Link></MenuItem>
+        </NavDropdown>
       </Nav>
       <Navbar.Form pullRight>
           <FormGroup>
