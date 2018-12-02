@@ -6,7 +6,6 @@ class Employee extends Component {
     return (
       <div>Employee PAGE
       </div>
-      
     );
   }
 }

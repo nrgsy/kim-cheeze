@@ -27,7 +27,7 @@ class Team extends Component {
 
   render() {
     var data = {
-      labels: ['Phil Kang', '1', 'Thomas Pech', 'Jade Hayes', 'Nathaniel Ford', 'Jacob Birk', 'Brant Strand', 'Kripa Argwal', 'Steven Davidovitz'],
+      labels: ['Phil Kang', '1', 'Thomas Pech', 'Nate', 'Jade Hayes', 'Jacob Birk', 'Nathaniel Ford', 'Kripa Argwal', 'Steven Davidovitz'],
       series: [
         [75, 70, 60, 71, 92, 94, 82, 65, 60, 80],
         [65, 60, 40, 61, 92, 74, 92, 85, 90, 80]

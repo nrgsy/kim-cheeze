@@ -28,7 +28,7 @@ class KNav extends Component {
       </Nav>
       <Navbar.Form pullRight>
           <FormGroup>
-            <FormControl type="text" placeholder="Phil Kang" />
+            <FormControl type="text" placeholder="Kim Cheeze" />
           </FormGroup>{' '}
           <Button type="submit">Submit</Button>
         </Navbar.Form>
