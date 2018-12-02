@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 import styled from 'styled-components';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import './Team.css';
 
 
@@ -22,13 +24,14 @@ const StyledGraphContainer =  styled.div`
 
 const StyledH3 =  styled.h3`
   text-align: center;
-  width: 70%;
+  width: 100%;
 `;
 
 class Team extends Component {
 
   render() {
-    var data = {
+
+    var line_data = {
       labels: ['Phil Kang', '1', 'Thomas Pech', 'Nate', 'Jade Hayes', 'Jacob Birk', 'Nathaniel Ford', 'Kripa Argwal', 'Steven Davidovitz'],
       series: [
         [75, 70, 60, 71, 92, 94, 82, 65, 60, 80],
@@ -37,41 +40,60 @@ class Team extends Component {
     };
 
 
-    var options = {
+    var line_options = {
       high: 100,
       low: 0,
       axisX: {
         labelInterpolationFnc: function(value, index) {
-          return index % 2 === 0 ? value : null;
+          return null;
         }
       }
     };
 
+    var data = {
+      labels: ['Phil Kang', 'Thomas Pech', 'Jade Hayes'],
+      series: [
+        [80, 60, 92],
+        [85, 40, 92]
+      ]
+    };
 
-    var type = 'Line'
+
+    var options = {
+      high: 100,
+      low: 0
+    };
+
+
+    var type = 'Bar'
+    var line_type = 'Line'
     return (
       <div className='container'>
         <Grid>
           <Row>
-            <StyledDropdownContainer>
-              <DropdownButton
-                title='Teams'>
-                <MenuItem eventKey="1">Launchpad</MenuItem>
-                <MenuItem eventKey="2">Apps</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey="3">K8s</MenuItem>
-                <MenuItem eventKey="4" active>Platform</MenuItem>
-              </DropdownButton>
-            </StyledDropdownContainer>
-            <StyledH3>Team: Platform</StyledH3>
+            <StyledH3>Team Overview</StyledH3>
           </Row>
           </Grid>
-              <ChartistGraph
-                    className='graph'
-                    data={data}
-                    options={options}
-                    type={type}
-                    />
+          <Link to="/employee/Thomas-Pech">
+          <div className="chart-container">
+          <ChartistGraph
+            className='graph'
+            data={data}
+            options={options}
+            type={type}
+          />
+          </div>
+          </Link>
+          <div className="line-chart-container">
+          
+          <ChartistGraph
+            className='graph'
+            data={line_data}
+            options={line_options}
+            type={line_type}
+          />
+          </div>
+              
       </div>
 
     );

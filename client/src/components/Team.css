@@ -1,3 +1,16 @@
 .graph {
   height: 30em;
+
+}
+
+.chart-container {
+  width: 30%;
+  display: inline-block;
+
+}
+
+
+.line-chart-container {
+  width: 60%;
+  display: inline-block;
 }
