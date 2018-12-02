@@ -12,6 +12,7 @@ import {
   DropdownButton,
   MenuItem,
   Image,
+  Alert,
   Button
 } from 'react-bootstrap'
 
@@ -77,7 +78,9 @@ class Employee extends Component {
                     options={options}
                     type={type}
                     />
-                          <Button bsStyle="primary tada">Schedule 1-1</Button>
+                          <Button bsStyle="primary tada">Schedule 1-1</Button><Alert bsStyle="warning">
+  <strong>Thomas</strong> hasn't had a raise for <strong>2 years</strong>.
+</Alert>
 
       </div>
 
