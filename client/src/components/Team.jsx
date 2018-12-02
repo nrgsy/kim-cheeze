@@ -42,7 +42,7 @@ class Team extends Component {
 
     var line_options = {
       high: 100,
-      low: 0,
+      low: 0,  showArea: true,
       axisX: {
         labelInterpolationFnc: function(value, index) {
           return null;

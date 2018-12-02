@@ -39,7 +39,7 @@ class Employee extends Component {
 
     var options = {
       high: 100,
-      low: 0,
+      low: 0,  showArea: true,
       axisX: {
         labelInterpolationFnc: function(value, index) {
           return  null;
