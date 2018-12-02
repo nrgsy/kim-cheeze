@@ -20,7 +20,7 @@ class KNav extends Component {
       </Navbar.Header>
       <Nav>
         <NavItem eventKey={2}>
-          <Link to="/TLC">TLC</Link>
+          <Link to="/social">Social</Link>
         </NavItem>
         <NavItem eventKey={2}>
           <Link to="/teams">Team</Link>
