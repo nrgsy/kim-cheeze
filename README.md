@@ -1,11 +1,18 @@
 [![Build Status](https://travis-ci.org/phillipxkang/kim-cheeze.svg?branch=master)](https://travis-ci.org/phillipxkang/kim-cheeze)
 
 
-<p align="center"><img style="max-height: 900px" src="client/logo.png" /></p>
+
+<p align="center">[<img style="max-height: 900px" src="client/logo.png" />](https://bring-clarity.com)</p>
 <p align="center">Bringing clear insights into your employees' well-being</p>
 
 ## Overview:
-Please describe this product or service including any machine learning models used
+### Random Forest and Gradient Boosting Classifiers:
+Random Forest and Gradient Boosting classifiers were desirable for predicting employee attrition because they are much stronger learners than the decision trees but still retain the property of explainability that other classifiers like neural networks or support vector machines lack.
+
+Created by IBM, our dataset of employee attrition consisted of 1470 examples of employees decribed by 34 features and a label detailing whether or not they left the company:
+https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset
+
+We added a 35th feature representing how well an employee is connected to others within the company, as a normalized between 0 and 1. For the purpose of this hackathon the data was mocked, but would otherwise be quantified via their interactions on SAS workflows like slack and github. The strength of each employee's relationships with other employees would be estimated, and any relationships with employees that have left the company would negatively impact their final connectedness score.
 
 ## Key Technologies:
 for example: Flask, Tensor Flow, Keras
@@ -18,19 +25,11 @@ Our project is heavily integrated into CI tools. Our frontend uses Netlify to bu
   cd client
   npm start
   ```
-### Local server build and deploy:
+### Local web server build and deploy:
   ```
   cd server
   docker-compose up
   ```
-### Random Forest and Gradient Boosting Classifiers:
-Random Forest and Gradient Boosting classifiers were desirable for predicting employee attrition because they are much stronger learners than the decision trees but still retain the property of explainability that other classifiers like neural networks or support vector machines lack.
-
-Created by IBM, our dataset of employee attrition consisted of 1470 examples of employees decribed by 34 features and a label detailing whether or not they left the company:
-https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset
-
-We added a 35th feature representing how well an employee is connected to others within the company, as a normalized between 0 and 1. For the purpose of this hackathon the data was mocked, but would otherwise be quantified via their interactions on SAS workflows like slack and github. The strength of each employee's relationships with other employees would be estimated, and any relationships with employees that have left the company would negatively impact their final connectedness score.
-
 ### Train & view performance metrics for each classifier
   ```
   cd server
